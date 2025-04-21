@@ -6,6 +6,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'Student') {
 }
 
 include 'db_connect.php';
+$page = isset($_GET['page'])?$_GET['page']:'home';
 ?>
 
 <!DOCTYPE html>
@@ -115,8 +116,11 @@ include 'db_connect.php';
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Student Dashboard</a>
+    <a class="navbar-brand" href="student_dashboard.php">Student Dashboard</a>
         <div class="ms-auto">
+            <!-- Alumni List Link -->
+            <a href="student_dashboard.php?page=alumni_list" class="btn btn-outline-light me-3">Alumni List</a>
+                <!-- Logout Button -->
             <a href="logout.php" class="btn btn-danger">Logout</a>
         </div>
     </div>
@@ -127,6 +131,9 @@ include 'db_connect.php';
 
 
     <?php
+    if ($page === 'alumni_list') {
+        include 'alumni_list.php';
+    } else {
 $sql = "SELECT posts.id, posts.content, posts.file_path, users.name, users.role, users.linkedin 
         FROM posts 
         JOIN users ON posts.user_id = users.id 
@@ -216,7 +223,7 @@ if ($result->num_rows > 0) {
     echo "<div class='no-posts'>
             <h4>No posts available yet. 📭</h4>
           </div>";
-}
+}}
 ?>
 
 

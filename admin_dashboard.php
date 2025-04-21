@@ -208,11 +208,15 @@ button[type='submit'] {
                         </div>
                     </div>
                     <div class='col-md-6'>
-                        <div class='card bg-success text-white p-4'>
-                            <h3>Total Alumni: $alumni_count</h3>
-                        </div>
+                        <a href='admin_dashboard.php?page=alumni_list' style='text-decoration: none;'>
+                            <div class='card bg-success text-white p-4'>
+                                <h3>Total Alumni: $alumni_count</h3>
+                            </div>
+                        </a>
                     </div>
                   </div>";
+        }elseif ($page == 'alumni_list'){
+            include 'alumni_list.php';
         }
 
         // Create Admin Post

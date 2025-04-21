@@ -82,6 +82,7 @@ function sendEmailToStudents($conn, $postContent) {
             <li class="nav-item mb-2"><a href="?page=create_post" class="nav-link text-white">➕ Create New Post</a></li>
             <li class="nav-item mb-2"><a href="?page=my_posts" class="nav-link text-white">📃 My Posts</a></li>
             <li class="nav-item mb-2"><a href="?page=profile" class="nav-link text-white">👤 Profile</a></li>
+            <li class="nav-item mb-2"><a href="?page=alumni_list" class="nav-link text-white">🎓 Alumni List</a></li>
         </ul>
         <a href="logout.php" class="btn btn-danger w-100 mt-4">Logout</a>
     </div>
@@ -323,6 +324,9 @@ function sendEmailToStudents($conn, $postContent) {
                 <a href="?page=edit_profile" class="btn btn-primary w-100 mt-3">✎ Edit Profile</a>
             </div>
             <?php
+        }
+        elseif ($page == 'alumni_list'){
+            include 'alumni_list.php';
         }
         ?>
         
