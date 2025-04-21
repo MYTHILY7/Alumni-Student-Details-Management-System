@@ -254,7 +254,7 @@ function sendEmailToStudents($conn, $postContent) {
                                 <p>Best Regards,<br><b>Alumni Management Team</b></p>
                             ";
                     
-                            sendEmail($email, $subject, $message);
+                            //sendEmail($email, $subject, $message);
                     
                             header("Location: ?page=profile&success=Profile updated successfully!");
                             exit();
