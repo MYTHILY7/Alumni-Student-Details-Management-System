@@ -93,7 +93,7 @@ function sendEmailToStudents($conn, $postContent) {
         $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 
         if ($page == 'dashboard') {
-            echo '<h2>📊 Dashboard - Approved Posts</h2>';
+            echo '<h2>📊 Dashboard</h2>';
 
             $post_query = "SELECT p.id, p.content, p.file_path, p.created_at, u.id AS user_id, u.name, u.role
                            FROM posts p 
@@ -254,7 +254,7 @@ function sendEmailToStudents($conn, $postContent) {
                                 <p>Best Regards,<br><b>Alumni Management Team</b></p>
                             ";
                     
-                            //sendEmail($email, $subject, $message);
+                            sendEmail($email, $subject, $message);
                     
                             header("Location: ?page=profile&success=Profile updated successfully!");
                             exit();

@@ -186,7 +186,7 @@ button[type='submit'] {
             <li class="nav-item mb-2"><a href="?page=dashboard" class="nav-link text-white">📊 Dashboard</a></li>
             <li class="nav-item mb-2"><a href="?page=create_post" class="nav-link text-white">➕ Create Admin Post</a></li>
             <li class="nav-item mb-2"><a href="?page=requests" class="nav-link text-white">📥 Requests</a></li>
-            <li class="nav-item mb-2"><a href="?page=approve_alumni" class="nav-link text-white">Alumini Request</a></li>
+            <li class="nav-item mb-2"><a href="?page=approve_alumni" class="nav-link text-white">📥 Alumni Request</a></li>
             <li class="nav-item mb-2"><a href="?page=previous_posts" class="nav-link text-white">📃 Previous Posts</a></li>
             <li class="nav-item mb-2"><a href="?page=all_posts" class="nav-link text-white">📂 Posts</a></li>
         </ul>

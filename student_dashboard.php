@@ -127,13 +127,16 @@ $page = isset($_GET['page'])?$_GET['page']:'home';
 </nav>
 
 <div class="container mt-4">
-    <h2 class="text-center mb-4">📢 Latest Alumni Posts</h2>
+    
 
 
     <?php
     if ($page === 'alumni_list') {
         include 'alumni_list.php';
     } else {
+        ?>
+        <h2 class="text-center mb-4">📢 Latest Alumni Posts</h2>
+        <?php
 $sql = "SELECT posts.id, posts.content, posts.file_path, users.name, users.role, users.linkedin 
         FROM posts 
         JOIN users ON posts.user_id = users.id 
